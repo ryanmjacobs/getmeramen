@@ -32,6 +32,7 @@ app.use(async ctx => {
     ctx.body = "successss?";
 });
 
-app.listen(1251, function() {
-    console.log("listening http://0.0.0.0:1251");
+const port = process.env.port || 1251;
+app.listen(port, function() {
+    console.log("listening http://0.0.0.0:"+port);
 });
