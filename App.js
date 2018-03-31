@@ -1,13 +1,28 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { StyleSheet, Text, View, Image Button } from "react-native";
 
 export default class App extends React.Component {
+  this.state = {count: 0};
+
+  click = () => {
+      console.log(this.state.count);
+      this.setState(ps => {
+          ps.count++;
+          return ps;
+      });
+  };
+
   render() {
     return (
       <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
+        <Image
+          style={{width: 100, height: 100}}
+          source={{uri: "http://getmeramen.com/ramen.jpg"}}/>
+
+        <Text>get me ramen</Text>
+        <Text style={{fontSize: 200}}>{this.state.count}</Text>
+
+        <Button onPress={this.click} title="now"/>
       </View>
     );
   }
@@ -16,8 +31,8 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
