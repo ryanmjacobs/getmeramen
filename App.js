@@ -1,7 +1,20 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { StyleSheet, Text, View, Image, Button } from "react-native";
 
 export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {count: 0};
+  }
+
+  click = () => {
+    console.log(this.state.count);
+    this.setState(ps => {
+      ps.count++;
+      return ps;
+    });
+  };
+
   render() {
       return (
 	      <View styles={}
