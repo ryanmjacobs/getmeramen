@@ -2,7 +2,10 @@ import React from "react";
 import { StyleSheet, Text, View, Image, Button } from "react-native";
 
 export default class App extends React.Component {
-  this.state = {count: 0};
+  constructor(props) {
+      super(props);
+      this.state = {count: 0};
+  }
 
   click = () => {
       console.log(this.state.count);
