@@ -28,6 +28,8 @@ app.use(async ctx => {
             console.log(`stderr: ${stderr}`);
         });
     }
+
+    ctx.body = "successss?";
 });
 
 app.listen(1251, function() {
