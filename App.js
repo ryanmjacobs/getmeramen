@@ -3,16 +3,16 @@ import { StyleSheet, Text, View, Image, Button } from "react-native";
 
 export default class App extends React.Component {
   constructor(props) {
-      super(props);
-      this.state = {count: 0};
+    super(props);
+    this.state = {count: 0};
   }
 
   click = () => {
-      console.log(this.state.count);
-      this.setState(ps => {
-          ps.count++;
-          return ps;
-      });
+    console.log(this.state.count);
+    this.setState(ps => {
+      ps.count++;
+      return ps;
+    });
   };
 
   render() {
@@ -37,5 +37,5 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
-  },
+  }
 });
