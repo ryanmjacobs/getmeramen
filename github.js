@@ -18,8 +18,9 @@ app.use(async ctx => {
     const req = ctx.request.method + ctx.url;
 
     console.log(p.commits);
-    console.log(p.respository);
+    console.log(p.respository.name);
     console.log(p.commits.length);
+
     if (p.repository == "getmeramen" && p.commits.length > 0) {
         exec("git pull", (err, stdout, stderr) => {
             if (err) return;
